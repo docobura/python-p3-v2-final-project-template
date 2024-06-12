@@ -1,4 +1,7 @@
-import sqlite3
+# lib/models/__init__.py
+from .doctor import create_doctor_table
+from .patient import create_patient_table
 
-CONN = sqlite3.connect('company.db')
-CURSOR = CONN.cursor()
+def create_tables():
+    create_doctor_table()
+    create_patient_table()
